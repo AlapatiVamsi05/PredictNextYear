@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PredictNextYear</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="yearPredictor">
+      <h1>Predict Next Year</h1>
+      <label for="yearInput">Enter a year:</label>
+      <input type="number" id="yearInput" placeholder="e.g., 2025" />
+      <button id="predictYear">Predict</button>
+    </div>
+    <div id="popup">
+      <div>
+        <p id="result"></p>
+        <button
+          onclick='document.getElementById("popup").style.display="none"'
+          style="background-color: red"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
