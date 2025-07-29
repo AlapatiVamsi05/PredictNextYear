@@ -13,7 +13,11 @@
       <button id="predictYear">Predict</button>
     </div>
     <div id="popup">
-      <div>
+      <div id="progress">
+        <div id="progressbar"></div>
+        <span id="progressvalue">0%</span>
+      </div>
+      <div id="popupcontent" class="popupcontent">
         <p id="result"></p>
         <button
           onclick='document.getElementById("popup").style.display="none"'

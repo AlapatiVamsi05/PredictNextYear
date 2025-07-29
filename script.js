@@ -15,5 +15,25 @@ document.getElementById("predictYear").addEventListener("click", function() {
         let resultyear = year+1;
         resultElement.innerText = "The next year is: " + resultyear +" he he he he, nice year";
     }
+    let progress = document.getElementById("progress");
+    let popupcontent = document.getElementById("popupcontent");
+    let a = [0,16,25,47,50,69,81,99,99,99,99,100];
     popup.style.display = "flex";
+    popupcontent.style.display = "none";
+    progress.style.display = "block";
+    function loadingprogress(value){
+        let progressBar = document.getElementById("progressbar");
+        let progressValue = document.getElementById("progressvalue");
+        progressBar.style.width = value+"%";
+        progressValue.innerText = value + "%";
+    }
+    for(let i=0;i<a.length;i++){
+        setTimeout(() => {
+            loadingprogress(a[i]);
+        }, i*200);
+    }
+    setTimeout(() => {
+        progress.style.display = "none";
+        popupcontent.style.display = "flex";
+    }, (a.length + 1) * 200);
 });
